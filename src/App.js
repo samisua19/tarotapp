@@ -1,6 +1,7 @@
 import { Row } from 'react-bootstrap';
 import './App.css';
 import { CardComponent, CarouselComponent, NavBarComponent } from './components';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <CardComponent image = '/tarotCartas.jpg' description = 'Breve descripción de lo que se realiza.' titleButton = 'Ingresar' title='Otros'></CardComponent>
         </Row>
       </div>
+      <ToastContainer></ToastContainer>
     </>
   );
 }

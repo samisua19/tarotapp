@@ -13,7 +13,7 @@ const ButtonModalComponent = (props) => {
             </Button>
 
             <ModalBodyComponent
-            titleModal={props.titleModal}
+            titlemodal={props.titlemodal}
             show={modalShow}
             onHide={() => setModalShow(false)}
             > {props.children} </ModalBodyComponent>

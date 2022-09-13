@@ -12,7 +12,7 @@ const ModalBodyComponent = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          {props.titleModal}
+          {props.titlemodal}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
