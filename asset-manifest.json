@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/tarotapp/static/css/main.959fb944.css",
-    "main.js": "/tarotapp/static/js/main.489c543f.js",
+    "main.js": "/tarotapp/static/js/main.d1bd4063.js",
     "static/js/787.93afa0e0.chunk.js": "/tarotapp/static/js/787.93afa0e0.chunk.js",
     "static/media/tarotapp.png": "/tarotapp/static/media/tarotapp.3a392cd1c7f91d3daef5.png",
     "index.html": "/tarotapp/index.html",
     "main.959fb944.css.map": "/tarotapp/static/css/main.959fb944.css.map",
-    "main.489c543f.js.map": "/tarotapp/static/js/main.489c543f.js.map",
+    "main.d1bd4063.js.map": "/tarotapp/static/js/main.d1bd4063.js.map",
     "787.93afa0e0.chunk.js.map": "/tarotapp/static/js/787.93afa0e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.959fb944.css",
-    "static/js/main.489c543f.js"
+    "static/js/main.d1bd4063.js"
   ]
 }
