@@ -1,6 +1,7 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ButtonModalComponent from "./buttonModalComponent";
+import FormAppoimentComponent from "./formAppoimentComponent";
 
 const cardComponent = (props) => {
   return (
@@ -12,7 +13,7 @@ const cardComponent = (props) => {
             <p>{props.description}</p>
         </Card.Text>
         <div className="d-grid gap-2">
-            <Button variant="danger">{props.titleButton}</Button>
+          <ButtonModalComponent titleButtonModal="Agendar cita" titleModal="Agendar cita"><FormAppoimentComponent/></ButtonModalComponent>
         </div>
       </Card.Body>
     </Card>

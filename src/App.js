@@ -10,7 +10,7 @@ function App() {
         <div style={{textAlign:'center', margin:'10px'}}>
           <h1 style={{color:"#C1FE00"}}>Mejora tu relación</h1>
           <h3 style={{color:"#C1FE00"}}>Perfecciona tu tarot</h3>
-          <h5 style={{color:"#C1FE00"}}>Maestro Nombre</h5>
+          <h5 style={{color:"#C1FE00"}}>Maestro Espiritual Angel</h5>
         </div>
         <CarouselComponent style={{margin:'0px'}}/>
         <Row style={{display:'flex', flexDirection:'row', justifyContent: 'center'}}>
