@@ -149,12 +149,12 @@ const TableAppoimentComponent = () => {
   );
 
   return (
-    <div className="App-header" style={{ justifyContent: "flex-start" }}>
-      <h1>Agendas</h1>
-      <div style={{width: '1000px', fontSize: '20px', borderRadius: '10px'}}>
+    <div className="App-header" style={{ display: 'flex', justifyContent: 'center', borderRadius: '10px', margin: '-80px' }}>
+      <div style={{width: '1000px', fontSize: '20px'}}>
         <DataTable
           paginationPerPage={10}
           theme="dark"
+          title="Agendas"
           columns={columns}
           data={appoiment.sort(($a, $b) => $a.lastModified - $b.lastModified)}
           pagination={true}
