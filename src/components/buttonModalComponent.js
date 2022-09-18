@@ -6,9 +6,14 @@ const ButtonModalComponent = (props) => {
     
   const [modalShow, setModalShow] = useState(false);
 
+  const returnUrlHome = () => {
+    const url = window.location.href.replace('/tableAppoiment',"/tarotapp")
+    window.location.replace(url)
+  }
+
   return (
       <>
-            <Button variant="secondary" onClick={() => setModalShow(true)}>
+            <Button variant="secondary" onClick={() =>  window.location.href.includes("/tarotapp") ? setModalShow(true) : returnUrlHome() }>
                 {props.titleButtonModal}
             </Button>
 

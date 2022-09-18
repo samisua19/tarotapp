@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-const carouselComponent = () => {
+const CarouselComponent = () => {
   return (
     <Carousel style={{ width: "800px", height: "110px" }}>
       <Carousel.Item style={{ textAlign: "center" }}>
@@ -20,4 +20,4 @@ const carouselComponent = () => {
   );
 };
 
-export default carouselComponent;
+export default CarouselComponent;

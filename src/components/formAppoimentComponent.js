@@ -20,16 +20,18 @@ const FormAppoimentComponent = () => {
   yesterday.setDate(yesterday.getDate() - 1);
   const date = yesterday.toISOString().slice(0, 10);
   const min =
-    today.getMinutes().toString().length == 1
+    today.getMinutes().toString().length === 1
       ? "0" + today.getMinutes().toString()
       : today.getMinutes().toString();
 
   const hour = today.getHours().toString() + ":" + min;
   const [appoiment, setAppoiment] = useState(newAppoiment);
   const [disableButton, setDisbledButton] = useState(false);
+  const [isValidateHour, setIsValidateHour] = useState(false);
 
   const changeForm = (event) => {
     const { name, value } = event.target;
+    if(name === "appoimentDate") validateDate(value)
     setAppoiment({ ...appoiment, [name]: value });
   };
 
@@ -58,6 +60,10 @@ const FormAppoimentComponent = () => {
       console.error("Error adding document: ", e);
     }
   };
+
+  const validateDate = (appoimentDate) => {
+    appoimentDate == date ? setIsValidateHour(true) : setIsValidateHour(false)
+  }
 
   const createAppoiment = () => {
     try {
@@ -120,6 +126,7 @@ const FormAppoimentComponent = () => {
         <Form.Label>Hora para la cita</Form.Label>
         <Form.Control
           type="time"
+          min={isValidateHour ? hour : undefined}
           placeholder="Hora para la cita"
           name="appoimentHour"
           onChange={changeForm}
