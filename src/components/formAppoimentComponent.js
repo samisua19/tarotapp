@@ -6,6 +6,9 @@ import { db } from "../database/firebase";
 import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 
 const FormAppoimentComponent = () => {
+
+  const createAt = new Date().getTime()
+
   const newAppoiment = {
     name: "",
     phone: "",
@@ -13,6 +16,9 @@ const FormAppoimentComponent = () => {
     appoimentDate: "",
     description: "",
     appoimentHour: "",
+    status: 'Pendiente',
+    createAt: createAt,
+    lastModified: createAt
   };
 
   const today = new Date();
@@ -52,7 +58,7 @@ const FormAppoimentComponent = () => {
         if (rsp && rsp.empty) {
           createAppoiment();
         } else {
-          toast.error("La fecha y la hora de la agenda ya está escogida.");
+          toast.error("La fecha y la hora de la agenda ya está ocupada.");
           setDisbledButton(false);
         }
       });
