@@ -68,7 +68,7 @@ const FormAppoimentComponent = () => {
   };
 
   const validateDate = (appoimentDate) => {
-    appoimentDate == date ? setIsValidateHour(true) : setIsValidateHour(false)
+    appoimentDate === date ? setIsValidateHour(true) : setIsValidateHour(false)
   }
 
   const createAppoiment = () => {

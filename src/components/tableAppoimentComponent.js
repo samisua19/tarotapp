@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
-import { Container, Form, Table } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { db } from "../database/firebase";
 import { toast } from "react-toastify";
 import DataTable from "react-data-table-component";
@@ -46,38 +46,77 @@ const columns = [
 
 const TableAppoimentComponent = () => {
   const [appoiment, setAppoiment] = useState([]);
-  const activeOrInactiveAppoiment = async (event, appoiment) => {
-    const { value } = event.target;
-    const lastModified = new Date().valueOf();
-    await updateAppoimentInBD(appoiment.id, {
-      ...appoiment,
-      lastModified,
-      status: value,
-    });
-  };
-  const updateAppoimentInBD = async (id, girl) => {
-    await setDoc(doc(db, "appoiment", id), { ...girl });
-    toast("Agenda actualizada", {
-      type: "success",
-      autoClose: 2000,
-    });
-  };
 
-  const addParseObjet = async (querySnapshot) => {
-    const arrAppoiment = [];
-    querySnapshot.forEach((appoiment) => {
-      arrAppoiment.push({ id: appoiment.id, ...appoiment.data(), status: selectButton(appoiment.data()) });
-    });
-    return arrAppoiment;
-  };
-
-  const getAppoiment = async () => {
-    onSnapshot(collection(db, "appoiment"), async (querySnapshot) => {
-      const arrAppoiment = await addParseObjet(querySnapshot);
-      setAppoiment(arrAppoiment);
-    });
-  };
   useEffect(() => {
+    const activeOrInactiveAppoiment = async (event, appoiment) => {
+      const { value } = event.target;
+      const lastModified = new Date().valueOf();
+      await updateAppoimentInBD(appoiment.id, {
+        ...appoiment,
+        lastModified,
+        status: value,
+      });
+    };
+
+    const updateAppoimentInBD = async (id, girl) => {
+      await setDoc(doc(db, "appoiment", id), { ...girl });
+      toast("Agenda actualizada", {
+        type: "success",
+        autoClose: 2000,
+      });
+    };
+
+    const selectButton = (_) => {
+      return (
+        <Form.Select
+          style={{
+            backgroundColor: selectColorStatus(_.status),
+            fontWeight: "bold",
+          }}
+          size="md"
+          value={_.status}
+          onChange={(event) => activeOrInactiveAppoiment(event, _)}
+        >
+          <option
+            value={"Pendiente"}
+            style={{ backgroundColor: "yellow", fontWeight: "bold" }}
+          >
+            Pendiente
+          </option>
+          <option
+            value={"Cumplida"}
+            style={{ backgroundColor: "green", fontWeight: "bold" }}
+          >
+            Cumplida
+          </option>
+          <option
+            value={"Incumplida"}
+            style={{ backgroundColor: "red", fontWeight: "bold" }}
+          >
+            Incumplida
+          </option>
+        </Form.Select>
+      );
+    };
+
+    const addParseObjet = async (querySnapshot) => {
+      const arrAppoiment = [];
+      querySnapshot.forEach((appoiment) => {
+        arrAppoiment.push({
+          id: appoiment.id,
+          ...appoiment.data(),
+          status: selectButton({...appoiment.data(), id: appoiment.id}),
+        });
+      });
+      return arrAppoiment;
+    };
+
+    const getAppoiment = async () => {
+      onSnapshot(collection(db, "appoiment"), async (querySnapshot) => {
+        const arrAppoiment = await addParseObjet(querySnapshot);
+        setAppoiment(arrAppoiment);
+      });
+    };
     getAppoiment();
   }, []);
 
@@ -101,56 +140,28 @@ const TableAppoimentComponent = () => {
     selectAllRowsItemText: "Todos",
   };
 
-  const selectButton = (_) => {
-    console.log(_);
-    return (
-      <Form.Select
-        style={{
-          backgroundColor: selectColorStatus(_.status),
-          fontWeight: "bold",
-        }}
-        size="md"
-        value={_.status}
-        onChange={(event) => activeOrInactiveAppoiment(event, _)}
-      >
-        <option
-          value={"Pendiente"}
-          style={{ backgroundColor: "yellow", fontWeight: "bold" }}
-        >
-          Pendiente
-        </option>
-        <option
-          value={"Cumplida"}
-          style={{ backgroundColor: "green", fontWeight: "bold" }}
-        >
-          Cumplida
-        </option>
-        <option
-          value={"Incumplida"}
-          style={{ backgroundColor: "red", fontWeight: "bold" }}
-        >
-          Incumplida
-        </option>
-      </Form.Select>
-    );
-  };
-
-  const ExpandedComponent = ({ data }) => <pre style={{textAlign: 'rigth', margin:'15px'}}>Descripción: {data.description}</pre>;
+  const ExpandedComponent = ({ data }) => (
+    <pre style={{ textAlign: "rigth", margin: "15px" }}>
+      <div>
+        <div style={{ whiteSpace: 'normal' }}>Motivo consulta: {data.description}</div>
+      </div>
+    </pre>
+  );
 
   return (
     <div className="App-header" style={{ justifyContent: "flex-start" }}>
       <h1>Agendas</h1>
-      <div>
+      <div style={{width: '1000px', fontSize: '20px', borderRadius: '10px'}}>
         <DataTable
           paginationPerPage={10}
           theme="dark"
           columns={columns}
-          data={appoiment}
+          data={appoiment.sort(($a, $b) => $a.lastModified - $b.lastModified)}
           pagination={true}
           responsive={true}
           paginationComponentOptions={paginacionOpciones}
           fixedHeader
-          expandableRows 
+          expandableRows
           expandableRowsComponent={ExpandedComponent}
         />
       </div>

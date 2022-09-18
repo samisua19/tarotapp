@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #252e4b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,15 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding:13px;
+  background-size: 100% 100%;
+  background-image: url(./astros.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.navBar{
+  background-image: linear-gradient(15deg, #151a41 10%, #252e4b 50%);
 }
 
 .App-link {
@@ -36,19 +45,7 @@
     transform: rotate(360deg);
   }
 }
-.img{
-  border-radius:5px;
-  border: 1px solid #999;
-  width:700px;
-  height:320px;
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-  background:url(./tarotapp.png);
-  background-size: cover;
-  }
-.img img{
-  width: 100%;
-}
+
 @media all and (min-width: 500px) and (max-width: 1000px)
 {  
 .img{
@@ -59,12 +56,24 @@
   width:300px;
   height:300px;
   background-size: 100% 100%;
+  background-image: url(./astros.png);
   background-repeat:no-repeat;
-  background:url(./tarotapp.png);
   background-size: cover;
-  
   }
 }
 .img img{
    width:100%;
+}
+
+.homeImage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(./homeImage.png);
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  width: 900px;
+  height: 400px;
+  background-size: 100% 100%;
 }

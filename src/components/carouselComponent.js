@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 const CarouselComponent = () => {
   return (
-    <Carousel style={{ width: "800px", height: "110px" }}>
+    <Carousel style={{ height: "150px" }}>
       <Carousel.Item style={{ textAlign: "center" }}>
         <h4>Alan Walker</h4>
         <p style={{fontSize:'20px'}}>Excelente Servico.</p>
