@@ -1,34 +1,41 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import FormAppoimentComponent from "./formAppoimentComponent";
+import FormLoginComponent from "./formLoginComponent";
 import ModalBodyComponent from "./modalBodyComponent";
 
 const ButtonModalComponent = (props) => {
   const [modalShow, setModalShow] = useState(false);
-
-  const returnUrlHome = () => {
-    const url = window.location.href.replace("/tableAppoiment", "");
-    window.location.replace(url);
-  };
+  const [page, setPage] = useState("home");
 
   return (
     <>
-      <Button
-        variant="secondary"
-        onClick={() =>
-          window.location.href.includes("/tableAppoiment")
-            ? returnUrlHome()
-            : setModalShow(true)
-        }
-      >
-        {props.titleButtonModal}
-      </Button>
+      {page === "home" ? (
+        <Button variant="secondary" onClick={() => setModalShow(true)}>
+          Ingresar
+        </Button>
+      ) : (
+        <Link to={"/tarotapp"}>
+          <Button variant="secondary" onClick={() => setPage("home")}>
+            Inicio
+          </Button>
+        </Link>
+      )}
 
       <ModalBodyComponent
         titlemodal={props.titlemodal}
         show={modalShow}
         onHide={() => setModalShow(false)}
       >
-        {props.children}
+        {props.titlemodal === "Agendar cita" ? (
+          <FormAppoimentComponent></FormAppoimentComponent>
+        ) : (
+          <FormLoginComponent
+            onHide={() => setModalShow(false)}
+            setPage={() => setPage("tableAppoiment")}
+          ></FormLoginComponent>
+        )}
       </ModalBodyComponent>
     </>
   );

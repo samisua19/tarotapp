@@ -44,10 +44,11 @@ const columns = [
   },
 ];
 
-const TableAppoimentComponent = () => {
+const TableAppoimentComponent = (props) => {
   const [appoiment, setAppoiment] = useState([]);
 
   useEffect(() => {
+
     const activeOrInactiveAppoiment = async (event, appoiment) => {
       const { value } = event.target;
       const lastModified = new Date().valueOf();

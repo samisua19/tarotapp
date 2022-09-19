@@ -15,7 +15,7 @@ function App() {
       <NavBarComponent titleButton={ window.location.href.includes("/tableAppoiment") ? 'Inicio' : 'Ingresar'}/>
       <Routes>
         <Route path='/tarotapp' element={<Home/>}/>
-        <Route path='/tarotapp/tableAppoiment' element={<TableAppoiment/>}/>
+        <Route path='/tableAppoiment' element={<TableAppoiment/>}/>
       </Routes>
       <ToastContainer></ToastContainer>
     </div>
