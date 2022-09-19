@@ -21,7 +21,8 @@ const FormLoginComponent = (props) => {
         } else {
           props.onHide();
           props.setPage();
-          navigate("/tableAppoiment");
+          sessionStorage.setItem("token", "7d2c68be037f797461d7bc02de25eef3")
+          navigate("/tableAppoiment",{pass});
         }
       });
     } catch (e) {

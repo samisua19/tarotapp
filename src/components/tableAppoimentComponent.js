@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import { db } from "../database/firebase";
 import { toast } from "react-toastify";
 import DataTable from "react-data-table-component";
+import { useNavigate } from "react-router-dom";
 
 const columns = [
   {
@@ -46,8 +47,16 @@ const columns = [
 
 const TableAppoimentComponent = (props) => {
   const [appoiment, setAppoiment] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
+
+    if(!sessionStorage.getItem("token") || sessionStorage.getItem("token") !== "7d2c68be037f797461d7bc02de25eef3"){
+      navigate("/tarotapp")
+    }else if(sessionStorage.getItem("token") && sessionStorage.getItem("token") === "7d2c68be037f797461d7bc02de25eef3"){
+      sessionStorage.clear()
+    }else {
+      navigate("/tarotapp")
+    }
 
     const activeOrInactiveAppoiment = async (event, appoiment) => {
       const { value } = event.target;
