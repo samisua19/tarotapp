@@ -12,10 +12,10 @@ const TableAppoiment = () => <TableAppoimentComponent/>
 function App() {
   return (
     <div>
-      <NavBarComponent titleButton={ window.location.href.includes("/tarotapp") ? 'Ingresar' : 'Inicio'}/>
+      <NavBarComponent titleButton={ window.location.href.includes("/tableAppoiment") ? 'Inicio' : 'Ingresar'}/>
       <Routes>
         <Route path='/tarotapp' element={<Home/>}/>
-        <Route path='/tableAppoiment' element={<TableAppoiment/>}/>
+        <Route path='/tarotapp/tableAppoiment' element={<TableAppoiment/>}/>
       </Routes>
       <ToastContainer></ToastContainer>
     </div>
