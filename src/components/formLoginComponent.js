@@ -2,12 +2,13 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { db } from "../database/firebase";
 
 const FormLoginComponent = (props) => {
   const [pass, setPass] = useState("");
+  const navigate = useNavigate();
   const validateLoginFrom = (event) => {
     event.preventDefault();
     const md5 = require("md5");
@@ -18,12 +19,14 @@ const FormLoginComponent = (props) => {
         if (rsp && rsp.empty) {
           toast.error("Contraseña incorrecta");
         } else {
-          /* const url = window.location.href + 'tableAppoiment'
-          window.location.replace(url) */
+          props.onHide();
+          props.setPage();
+          navigate("/tableAppoiment");
         }
       });
     } catch (e) {
       console.error("Error adding document: ", e);
+      return undefined;
     }
   };
 
@@ -43,20 +46,14 @@ const FormLoginComponent = (props) => {
           onChange={(event) => handlePassword(event)}
         />
       </Form.Group>
-      <Link to={"/tableAppoiment"}>
-        <div className="d-grid gap-2">
-          <Button
-            variant="secondary"
-            type="submit"
-            onClick={() => {
-              props.onHide();
-              props.setPage();
-            }}
-          >
-            Ingresar
-          </Button>
-        </div>
-      </Link>
+      <div className="d-grid gap-2">
+        <Button
+          variant="secondary"
+          type="submit"
+        >
+          Ingresar
+        </Button>
+      </div>
     </Form>
   );
 };
