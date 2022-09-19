@@ -20,7 +20,7 @@ const FormLoginComponent = () => {
         if (rsp && rsp.empty) {
           toast.error("Contraseña incorrecta")
         } else {
-          const url = window.location.href + '/tableAppoiment'
+          const url = window.location.href + 'tableAppoiment'
           window.location.replace(url)
         }
       });
