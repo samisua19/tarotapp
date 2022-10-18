@@ -1,7 +1,9 @@
 import React from "react";
 import { Image, Row, Col, Container } from "react-bootstrap";
+import ButtonModalComponent from "./buttonModalComponent";
 import CardComponent from "./cardComponent";
 import CarouselComponent from "./carouselComponent";
+import FormLoginComponent from "./formLoginComponent";
 const HomeComponent = () => {
   return (
     <>
@@ -84,11 +86,44 @@ const HomeComponent = () => {
                 width: "350px",
                 backgroundColor: "#eeeeee",
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
+                flexDirection: "column",
                 borderRadius: "10px",
+                padding: '20px'
               }}
-            ></Col>
+            >
+              <ButtonModalComponent titleButtonModal="Ingresar" titleModal="Ingresar"><FormLoginComponent></FormLoginComponent></ButtonModalComponent>
+              <Image src={process.env.PUBLIC_URL + '/tarot-lovers.jpg'} style={{borderRadius: '10px', marginTop: '20px'}} />
+              <div style={{backgroundColor: '#b38fc6', height: '300px', borderRadius: '10px', marginTop: '10px', display: 'flex', flexDirection: 'column', justifyContent:'center'}}>
+                <h3 style={{fontFamily: ["Comic Sans MS"], textAlign: 'center'}}>El maestro Ángel te ayudará en tu SALUD y en tu VIDA, en el AMOR, en tu MATRIMONIO o en tu NEGOCIO.</h3>
+                <h3 style={{fontFamily: ["Comic Sans MS"], textAlign: 'center'}}><strong>¡Que esperas para contactarme!</strong></h3>
+              </div>
+              <div style={{margin: '5px'}}>
+                <h3 style={{color: '#462756', fontFamily: ["Comic Sans MS"]}}>Listado de mis servicios</h3>
+                <ul style={{color: '#462756', fontFamily: ["Comic Sans MS"]}}>
+                  <li>
+                    Amarres
+                  </li>
+                  <li>
+                    Magia
+                  </li>
+                  <li>
+                    Limpieza
+                  </li>
+                  <li>
+                    Lectura de cartas del tarot
+                  </li>
+                  <li>
+                    Destruyo maleficios
+                  </li>
+                  <li>
+                    Retiro enemigos
+                  </li>
+                  <li>
+                    ¿Tu pareja te fue infiel?
+                  </li>
+                </ul>
+              </div>
+            </Col>
           </Row>
         </Container>
       </div>
