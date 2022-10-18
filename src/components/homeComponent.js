@@ -6,74 +6,91 @@ const HomeComponent = () => {
   return (
     <>
       <div className="App-header" style={{ justifyContent: "flex-start" }}>
-        <div className="homeImage">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              marginTop: "20px",
-            }}
-          >
-            <div style={{margin: '5px'}}>
-              <h5 style={{ color: "yellow", fontSize: "50px" }}>
-                Maestro Espiritual Angel
-              </h5>
-              <h5 style={{ color: "white", fontSize: "50px" }}>
-                El Sanador Espiritual
-              </h5>
-              <h5 style={{ color: "white", fontSize: "30px" }}>
-                Para dar un grandioso cambio a tu vida y traerte <strong>SALUD, DINERO, AMOR Y PROSPERIDAD</strong>
-              </h5>
-            </div>
-            <div style={{display:'flex'}}>
-              <div className="listCenter">
-                <ul>
-                  <li style={{ textAlign: "left" }}>
-                    Si quieres ver a tu <strong>SER AMADO</strong> arrodillado <br></br> a
-                    tus pies
-                  </li>
-                  <li>
-                    Amarres <strong>FUERTES Y SEGUROS</strong>
-                  </li>
-                </ul>
+        <Container>
+          <Row>
+            <Col>
+              <div className="homeImage">
+                <div>
+                  <h5
+                    style={{
+                      color: "yellow",
+                      fontSize: "60px",
+                      fontFamily: ["Comic Sans MS"],
+                    }}
+                  >
+                    Maestro Espiritual Angel
+                  </h5>
+                  <h5
+                    style={{
+                      color: "white",
+                      fontSize: "50px",
+                      fontFamily: ["Comic Sans MS"],
+                    }}
+                  >
+                    El Sanador Espiritual
+                  </h5>
+                  <h5
+                    style={{
+                      color: "white",
+                      fontSize: "30px",
+                      fontFamily: ["Comic Sans MS"],
+                    }}
+                  >
+                    Para dar un grandioso cambio a tu vida y traerte
+                    <strong>SALUD, DINERO, AMOR Y PROSPERIDAD</strong>
+                  </h5>
+                </div>
               </div>
-              <div className="listCenter">
-                <ul>
-                  <li>Lectura de TAROT y palma de mano</li>
-                  <li>
-                    Resultados inmediatos <strong>100% GARANTIZADOS</strong>
-                  </li>
-                </ul>
+              <Container>
+                <div style={{ color: "black", fontSize: "15px", fontFamily: ["Comic Sans MS"], }}>
+                  <p>
+                    Obtén respuestas en este periodo de incertidumbre. <strong>¿Estás
+                    preocupado por tu futuro?</strong> 1 millon de personas han
+                    experimentado una consulta con un tarotista para ser
+                    guiados. ¡Escoge nuestros servicios y aprovecha tu primera consulta con un
+                    vidente excepcional!
+                  </p>
+                </div>
+              </Container>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <CardComponent
+                  image="/tarotCartas.jpg"
+                  description="¿Tienes dudas de lo que te depara para el futuro? Dejame ayudarte."
+                  titleButton="Agenda tu cita"
+                  title="Lectura de cartas"
+                ></CardComponent>
+                <CardComponent
+                  image="/amarres.jpg"
+                  description="¿Quieres a tu ser amado arrodillado a tus pies? Mi trabajo es 100% GARANTIZADO."
+                  titleButton="Agenda tu cita"
+                  title="Amarres"
+                ></CardComponent>
+                <CardComponent
+                  image="/horoscopo.png"
+                  description="Disponemos de una gran variedad de servicios, agenda tu cita YA."
+                  titleButton="Agenda tu cita"
+                  title="Otros"
+                ></CardComponent>
               </div>
-            </div>
-          </div>
-        </div>
-        <Row
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <CardComponent
-            image="/tarotCartas.jpg"
-            description="Breve descripción de lo que se realiza."
-            titleButton="Agenda tu cita"
-            title="Lectura de cartas"
-          ></CardComponent>
-          <CardComponent
-            image="/amarres.jpg"
-            description="Breve descripción de lo que se realiza."
-            titleButton="Agenda tu cita"
-            title="Amarres"
-          ></CardComponent>
-          <CardComponent
-            image="/horoscopo.png"
-            description="Breve descripción de lo que se realiza."
-            titleButton="Agenda tu cita"
-            title="Otros"
-          ></CardComponent>
-        </Row>
+            </Col>
+            <Col
+              style={{
+                width: "350px",
+                backgroundColor: "#eeeeee",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                borderRadius: "10px",
+              }}
+            ></Col>
+          </Row>
+        </Container>
       </div>
     </>
   );

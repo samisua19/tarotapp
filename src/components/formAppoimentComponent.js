@@ -92,7 +92,7 @@ const FormAppoimentComponent = () => {
   return (
     <Form onSubmit={handleAppoiment} id="appoimentForm">
       <Form.Group className="mb-3">
-        <Form.Label>Nombre</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Nombre</Form.Label>
         <Form.Control
           type="text"
           placeholder="Nombre"
@@ -101,7 +101,7 @@ const FormAppoimentComponent = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Teléfono</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Teléfono</Form.Label>
         <Form.Control
           type="number"
           placeholder="Teléfono"
@@ -110,7 +110,7 @@ const FormAppoimentComponent = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Correo electrónico</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Correo electrónico</Form.Label>
         <Form.Control
           type="email"
           placeholder="Correo eléctronico"
@@ -119,7 +119,7 @@ const FormAppoimentComponent = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Fecha para cita</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Fecha para cita</Form.Label>
         <Form.Control
           min={date}
           type="date"
@@ -129,7 +129,7 @@ const FormAppoimentComponent = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Hora para la cita</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Hora para la cita</Form.Label>
         <Form.Control
           type="time"
           min={isValidateHour ? hour : undefined}
@@ -139,7 +139,7 @@ const FormAppoimentComponent = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Descripcón del problema</Form.Label>
+        <Form.Label style={{color:'#8a57a5'}}>Descripcón del problema</Form.Label>
         <Form.Control
           as="textarea"
           placeholder="Descripcón del problema"
