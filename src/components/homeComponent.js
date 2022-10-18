@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Row } from "react-bootstrap";
+import { Image, Row, Col, Container } from "react-bootstrap";
 import CardComponent from "./cardComponent";
 import CarouselComponent from "./carouselComponent";
 const HomeComponent = () => {
@@ -7,12 +7,46 @@ const HomeComponent = () => {
     <>
       <div className="App-header" style={{ justifyContent: "flex-start" }}>
         <div className="homeImage">
-          <div style={{display: 'flex', flexDirection: 'column', marginTop: '20px'}}>
-            <h1 style={{ color: "white", fontSize: '50px' }}>Mejora tu relación</h1>
-            <h3 style={{ color: "white", fontSize: '35px' }}>Consulta tu futuro</h3>
-            <h5 style={{ color: "yellow", fontSize: '30px' }}>Maestro Espiritual Angel</h5>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "20px",
+            }}
+          >
+            <div style={{margin: '5px'}}>
+              <h5 style={{ color: "yellow", fontSize: "50px" }}>
+                Maestro Espiritual Angel
+              </h5>
+              <h5 style={{ color: "white", fontSize: "50px" }}>
+                El Sanador Espiritual
+              </h5>
+              <h5 style={{ color: "white", fontSize: "30px" }}>
+                Para dar un grandioso cambio a tu vida y traerte <strong>SALUD, DINERO, AMOR Y PROSPERIDAD</strong>
+              </h5>
+            </div>
+            <div style={{display:'flex'}}>
+              <div className="listCenter">
+                <ul>
+                  <li style={{ textAlign: "left" }}>
+                    Si quieres ver a tu <strong>SER AMADO</strong> arrodillado <br></br> a
+                    tus pies
+                  </li>
+                  <li>
+                    Amarres <strong>FUERTES Y SEGUROS</strong>
+                  </li>
+                </ul>
+              </div>
+              <div className="listCenter">
+                <ul>
+                  <li>Lectura de TAROT y palma de mano</li>
+                  <li>
+                    Resultados inmediatos <strong>100% GARANTIZADOS</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <CarouselComponent style={{ margin: "0px" }} />
         </div>
         <Row
           style={{
@@ -24,19 +58,19 @@ const HomeComponent = () => {
           <CardComponent
             image="/tarotCartas.jpg"
             description="Breve descripción de lo que se realiza."
-            titleButton="Ingresar"
+            titleButton="Agenda tu cita"
             title="Lectura de cartas"
           ></CardComponent>
           <CardComponent
             image="/amarres.jpg"
             description="Breve descripción de lo que se realiza."
-            titleButton="Ingresar"
+            titleButton="Agenda tu cita"
             title="Amarres"
           ></CardComponent>
           <CardComponent
             image="/horoscopo.png"
             description="Breve descripción de lo que se realiza."
-            titleButton="Ingresar"
+            titleButton="Agenda tu cita"
             title="Otros"
           ></CardComponent>
         </Row>

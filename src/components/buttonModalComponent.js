@@ -13,7 +13,7 @@ const ButtonModalComponent = (props) => {
     <>
       {page === "home" ? (
         <Button variant="secondary" onClick={() => setModalShow(true)}>
-          Ingresar
+          {props.titleButtonModal}
         </Button>
       ) : (
         <Link to={"/tarotapp"}>

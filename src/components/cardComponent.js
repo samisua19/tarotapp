@@ -13,7 +13,7 @@ const CardComponent = (props) => {
             {props.description}
         </Card.Text>
         <div className="d-grid gap-2">
-          <ButtonModalComponent titleButtonModal="Agendar cita" titlemodal="Agendar cita"><FormAppoimentComponent/></ButtonModalComponent>
+          <ButtonModalComponent titleButtonModal={props.titleButton} titlemodal="Agendar cita"><FormAppoimentComponent/></ButtonModalComponent>
         </div>
       </Card.Body>
     </Card>
