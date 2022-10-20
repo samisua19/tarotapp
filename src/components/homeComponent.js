@@ -10,7 +10,7 @@ const HomeComponent = () => {
       <div className="App-header" style={{ justifyContent: "flex-start" }}>
         <Container>
           <Row>
-            <Col>
+            <Col lg={8} xl={8}>
               <Row className="homeImage">
                 <div>
                   <h5 className="nameMaster" style={{}}>
@@ -56,7 +56,7 @@ const HomeComponent = () => {
                   justifyContent: "center",
                 }}
               >
-                <Col>
+                <Col lg={6} xl={6}>
                   <CardComponent
                     image="/tarotCartas.jpg"
                     description="¿Tienes dudas de lo que te depara para el futuro? Dejame ayudarte."
@@ -64,7 +64,7 @@ const HomeComponent = () => {
                     title="Lectura de cartas"
                   ></CardComponent>
                 </Col>
-                <Col>
+                <Col lg={6} xl={6}>
                   <CardComponent
                     image="/amarres.jpg"
                     description="¿Quieres a tu ser amado arrodillado a tus pies? Mi trabajo es 100% GARANTIZADO."
@@ -72,7 +72,7 @@ const HomeComponent = () => {
                     title="Amarres"
                   ></CardComponent>
                 </Col>
-                <Col>
+                <Col lg={6} xl={6}>
                   <CardComponent
                     image="/horoscopo.png"
                     description="Disponemos de una gran variedad de servicios, agenda tu cita YA."
@@ -84,7 +84,7 @@ const HomeComponent = () => {
             </Col>
             <Col
               style={{
-                width: "350px",
+                width: "300px",
                 backgroundColor: "#eeeeee",
                 display: "flex",
                 flexDirection: "column",
@@ -129,7 +129,7 @@ const HomeComponent = () => {
                 <h3 style={{ color: "#462756", fontFamily: ["Comic Sans MS"] }}>
                   Listado de mis servicios
                 </h3>
-                <ul style={{ color: "#462756", fontFamily: ["Comic Sans MS"] }}>
+                <ul style={{ color: "#462756", fontFamily: ["Comic Sans MS"], fontSize: '25px' }}>
                   <li>Amarres</li>
                   <li>Magia</li>
                   <li>Limpieza</li>

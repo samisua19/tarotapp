@@ -164,7 +164,7 @@
   }
 }
 
-@media all and (min-width: 440px) and (max-width: 499px){
+@media all and (min-width: 425px) and (max-width: 499px){
   .card{
     width: 22rem !important ;
   }
@@ -182,12 +182,17 @@
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1000px){
+@media all and (min-width: 768px) and (max-width: 991px){
   .card{
     width: 41rem !important ;
   }
   .card-img-top{
     height: 300px !important ;
+  }
+}
+@media all and (min-width: 992px){
+  .card{
+    width: 18rem !important ;
   }
 }
 
@@ -251,7 +256,7 @@
 
 
 
-@media all and (min-width: 731px) and (max-width: 1000px) {
+@media all and (min-width: 731px) and (max-width: 991px) {
   .homeImage{
     display: flex;
     flex-direction: column;
@@ -299,7 +304,7 @@
   }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 992px) {
   .logoNavbar{
     width: 150px;
   }
@@ -312,9 +317,12 @@
     border-radius: 10px;
     margin: 10px;
     width: 100% !important;
-    height: 300px;
+    height: 250px;
     background-size: 100% 100% !important;
     padding: 10px;
+  }
+  .initialText{
+    width: 100% !important;
   }
   .nameMaster{
     color: yellow;
