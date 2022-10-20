@@ -31,6 +31,7 @@
   background-color: #8a57a5;
   display: flex;
   flex-direction: column;
+  width: 100% !important;
 }
 
 .App-link {
@@ -64,21 +65,273 @@
 .img img{
    width:100%;
 }
-
-.homeImage{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(./tarothombre.jpg);
-  text-align: center;
-  border-radius: 10px;
-  margin: 10px;
-  width: 900px;
-  height: 400px;
-  background-size: 100% 100%;
-  padding: 10px;
+@media all and (min-width: 300px) and (max-width: 390px) {
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./tarothombre.jpg);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100% !important;
+    height: 150px;
+    background-size: 100% 100%;
+    padding: 10px;
+  }
+  .nameMaster{
+    color: yellow;
+    font-size: 21px;
+    font-family: "Comic Sans MS";
+  }
+  .titleImageInitial{
+    color: white;
+    font-size: 18px;
+    font-family: "Comic Sans MS";
+  }
+  .messageInitial{
+    color: white;
+    font-size: 13px;
+    font-family: "Comic Sans MS";
+  }
+  .logoNavbar{
+    width: 100px;
+  }
+  .containerLogo{
+    width: 100% !important;
+  }
+  .navBarContent{
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .containerPhone{
+    margin-top: 10px !important;
+    width: 92% !important;
+  }
+  .initialText{
+    width: 90% !important;
+  }
+  .card{
+    width: 15rem !important ;
+  }
 }
 
+@media all and (min-width: 390px) and (max-width: 522px) {
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./tarothombre.jpg);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100% !important;
+    height: 200px;
+    background-size: 100% 100% !important;
+    padding: 10px;
+  }
+  .nameMaster{
+    color: yellow;
+    font-size: 23px;
+    font-family: "Comic Sans MS";
+  }
+  .titleImageInitial{
+    color: white;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+  }
+  .messageInitial{
+    color: white;
+    font-size: 15px;
+    font-family: "Comic Sans MS";
+  }
+  .logoNavbar{
+    width: 100px;
+  }
+  .containerLogo{
+    width: 100% !important;
+  }
+  .navBarContent{
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .containerPhone{
+    margin-top: 10px !important;
+    width: 94% !important;
+  }
+  .initialText{
+    width: 90% !important;
+  }
+}
+
+@media all and (min-width: 440px) and (max-width: 499px){
+  .card{
+    width: 22rem !important ;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 725px){
+  .card{
+    width: 26rem !important ;
+  }
+}
+
+@media all and (min-width: 726px) and (max-width: 765px){
+  .card{
+    width: 30rem !important ;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1000px){
+  .card{
+    width: 41rem !important ;
+  }
+  .card-img-top{
+    height: 300px !important ;
+  }
+}
+
+@media all and (min-width: 526px) and (max-width: 767px){
+  .card-img-top{
+    height: 300px !important ;
+  }
+}
+
+@media all and (min-width: 523px) and (max-width: 730px) {
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./tarothombre.jpg);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100% !important;
+    height: 250px;
+    background-size: 100% 100% !important;
+    padding: 10px;
+  }
+  .nameMaster{
+    color: yellow;
+    font-size: 40px;
+    font-family: "Comic Sans MS";
+  }
+  .titleImageInitial{
+    color: white;
+    font-size: 35px;
+    font-family: "Comic Sans MS";
+  }
+  .messageInitial{
+    color: white;
+    font-size: 25px;
+    font-family: "Comic Sans MS";
+  }
+  .logoNavbar{
+    width: 100px;
+  }
+  .containerLogo{
+    width: 100% !important;
+  }
+  .navBarContent{
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .containerPhone{
+    margin-top: 10px !important;
+    width: 99% !important;
+  }
+  .initialText{
+    width: 90% !important;
+  }
+  .card{
+    width: 30rem !important;
+  }
+}
+
+
+
+
+@media all and (min-width: 731px) and (max-width: 1000px) {
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./tarothombre.jpg);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100% !important;
+    height: 300px;
+    background-size: 100% 100% !important;
+    padding: 10px;
+  }
+  .nameMaster{
+    color: yellow;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+  }
+  .titleImageInitial{
+    color: white;
+    font-size: 27px;
+    font-family: "Comic Sans MS";
+  }
+  .messageInitial{
+    color: white;
+    font-size: 22px;
+    font-family: "Comic Sans MS";
+  }
+  .logoNavbar{
+    width: 100px;
+  }
+  .containerLogo{
+    width: 100% !important;
+  }
+  .navBarContent{
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .containerPhone{
+    margin-top: 10px !important;
+    width: 99% !important;
+  }
+  .initialText{
+    width: 90% !important;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .logoNavbar{
+    width: 150px;
+  }
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./tarothombre.jpg);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100% !important;
+    height: 300px;
+    background-size: 100% 100% !important;
+    padding: 10px;
+  }
+  .nameMaster{
+    color: yellow;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+  }
+  .titleImageInitial{
+    color: white;
+    font-size: 27px;
+    font-family: "Comic Sans MS";
+  }
+  .messageInitial{
+    color: white;
+    font-size: 22px;
+    font-family: "Comic Sans MS";
+  }
+}
 .listCenter{
   display: flex;
   flex-direction: row;
