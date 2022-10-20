@@ -339,6 +339,11 @@
     font-size: 22px;
     font-family: "Comic Sans MS";
   }
+  
+  .navBarContent{
+    flex-direction: column;
+    width: 100% !important;
+  }
 }
 .listCenter{
   display: flex;
