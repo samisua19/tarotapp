@@ -66,9 +66,9 @@ const NavbarComponent = (props) => {
                     />
                   </Col>
                   <Col xl={10} md={10} sm={10} xs={10}>
-                    <a href="#">
+                    <a href="https://wa.link/t7w690">
                       <h3 style={{ fontFamily: ["Comic Sans MS"] }}>
-                        0124 181241 234
+                     ( 415) 504-5610
                       </h3>
                     </a>
                   </Col>
